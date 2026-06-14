@@ -1,3 +1,4 @@
+
 # Práctica 1 – Administración de Proyectos y Costos
 
 ## Parte I: Conceptos generales
@@ -115,3 +116,149 @@ La duración es el tiempo transcurrido en días laborables para finalizar una ac
 		- Duración: ~2 días, pero el esfuerzo total aumentó mucho. 
 
 Con 3-4 desarrolladores nos acercamos al crashpoint de la actividad. 
+
+## Parte III: Costos
+
+### 7. Una empresa quiere desarrollar un sistema pequeño de gestión interna (aproximadamente 10 KLOC):
+- a) Clasifique el tipo de sistema (orgánico / semi-embebido / embebido) y justifique.
+	- El tipo de sistema es orgánico porque involucra procesamiento de datos, uso de bases de datos, y se focaliza en transacciones y recuperación de datos, características que son típicas de un sistema de gestión interna.
+
+- b) Identifique al menos 5 factores que podrían afectar la estimación. Explique cómo impacta cada uno.
+	- ACAP (Capacidad de los analistas): si el equipo tiene baja capacidad de análisis, el esfuerzo necesario aumenta (en la tabla tiene un factor de hasta 1.46 en el nivel más bajo).
+	- AEXP (Experiencia en la aplicación): la falta de experiencia previa en sistemas de gestión similares incrementa el esfuerzo requerido.
+	- RELY (Confiabilidad requerida): si el sistema de gestión maneja datos críticos donde un fallo implica grandes pérdidas financieras, la estimación de tiempo y costo debe aumentar para asegurar esa calidad.
+	- CPLX (Complejidad del producto): la puntuación puede variar de Muy Baja si el módulo está compuesto de expresiones matemáticas simples a Extra Alta para módulos que utilizan muchos recursos de planificación.
+	- TOOL (Uso de herramientas de software): el uso de herramientas sofisticadas funciona como un multiplicador de productividad, reduciendo el tiempo estimado.
+
+### 8. Explique por qué las estimaciones iniciales suelen ser inexactas y proponga dos estrategias concretas para mejorar la estimación.
+
+En Ingeniería de Software somos notoriamente inexactos porque, a diferencia de otras profesiones, no hay muchas tareas repetitivas; cada proyecto difiere en dominio, herramientas, hardware y personal. Somos más "creadores" que constructores. Además, existen problemas políticos, donde las estimaciones se vuelven objetivos impuestos, y técnicos, como la falta de datos históricos.
+
+Se pueden usar varias estrategias para mejorar las estimaciones iniciales, como por ejemplo:
+1. Utilizar datos históricos: registrar las estimaciones y resultados de proyectos pasados en una base de datos para comparar similitudes en lugar de confiar solo en la memoria.
+2. Uso de modelos combinados: no confiar ciegamente en un solo modelo como COCOMO, se debe complementar el uso de herramientas con el juicio experto y la intuición del equipo.
+
+### 9. Compare al menos dos técnicas de estimación aplicadas a un mismo caso práctico. Indique ventajas y limitaciones.
+
+|Técnica|Ventajas|Limitaciones|
+|-|-|-|
+|**Juicio Experto**|Aprovecha la experiencia de personal senior y es rápida de aplicar cuando se conocen los parámetros| Es subjetiva y puede verse influenciada por intereses externos (ej. vendedores)|
+|**Analogía**| Es más visible y transparente al identificar similitudes y diferencias con proyectos pasados. | Requiere que la organización posea un registro confiable de datos históricos.|
+|**WBS**|Al definir tareas con alto nivel de detalle, permite que las estimaciones de costo y tiempo sean más exactas|Un enfoque "bottom-up" puede fallar si no se logra la granularidad adecuada en las tareas menores.|
+
+### 10. Elija una situación en un proyecto de software en la que una mala estimación haya generado un problema relevante durante su desarrollo.
+
+- Descríbalo brevemente, teniendo en cuenta el tipo de sistema, tamaño, complejidad, plazo, etc.
+- Indique cuál fue la estimación incorrecta y explique los motivos.
+
+no se
+
+## Parte IV: Gestión de proyectos
+
+### 11. Una municipalidad quiere implementar un sistema digital para gestionar reclamos ciudadanos.
+
+- Identifique al menos 4 stakeholders.
+	- Ciudadanos/Residentes (externos)
+	- Personal administrativo municipal (internos)
+	- Intendente y gabinete ejecutivo (internos)
+	- Prensa y medios locales (externos)
+	
+- Para cada stakeholder explique el interés, la influencia y las expectativas sobre el sistema.
+
+|**Stakeholder**|**Interés**|**Influencia**|**Expectativas**|
+|-|-|-|-|
+|**Ciudadanos**|Alto: desean que sus problemas locales se resuelvan|Alta: tienen derecho a desafiar decisiones y afectar la imagen pública| Facilidad de acceso, respuestas rápidas y transparencia en el estado del reclamo|
+|**Personal Administrativo**|Alto: el sistema cambia sus procesos de trabajo diarios|Media/Alta: su apoyo es crítico; la resistencia puede llevar al fracaso|Simplificación de tareas, reducción de carga manual y herramientas fáciles de usar|
+|**Intendente/ Gabinete**|Alto: alineación con la agenda política y metas de gobierno digital|Muy Alta: toman decisiones estratégicas y asignan presupuesto|Mejorar la percepción pública, optimizar costos y obtener datos para decidir|
+|**Prensa Local**|Medio: interés en informar sobre la gestión de servicios públicos|Media: moldean la opinión pública sobre el éxito o fracaso del proyecto|Transparencia total y acceso a información sobre el impacto del sistema|
+
+- Construya una matriz de impacto y explique 2 decisiones tomadas a partir de ella.
+	- Cuadrante Alto Impacto/Alta Importancia: ciudadanos e Intendente.
+	- Cuadrante Alto Impacto/Media Importancia: personal administrativo.
+	- Cuadrante Bajo Impacto/Media Importancia: prensa.
+	- Decisiones tomadas:
+		- Priorizar la usabilidad para el ciudadano: dado que tienen alto impacto y son el foco del beneficio, se decide realizar pruebas de usabilidad intensivas para garantizar que cualquier vecino pueda usar el sistema sin asistencia técnica.
+		- Plan de gestión del cambio para empleados: debido a que el proyecto impacta fuertemente en su rutina, se decide realizar workshops y capacitaciones tempranas para reducir la resistencia al cambio y asegurar que se apropien del sistema.
+
+### 12. Identifique 3 beneficios concretos y medibles que se espera obtener con la implementación del proyecto anterior, y para cada uno:
+- Describa el beneficio de manera específica.
+- Defina cómo y en qué momento se podría evaluar.
+- Especifique qué resultado se esperaría observar.
+
+El objetivo es asegurar que los beneficios sean específicos, medibles y vinculados a resultados estratégicos.
+
+- Beneficio 1: reducción del tiempo de respuesta.
+	- Descripción: disminuir el tiempo promedio desde que un ciudadano registra un reclamo hasta que este recibe una resolución o respuesta final.
+	- Evaluación: se evalúa mediante la comparación de métricas de desempeño del sistema vs. registros manuales históricos, 6 meses después del lanzamiento.
+	- Resultado esperado: reducción del 30% en el tiempo promedio de resolución de reclamos de luminarias y bacheo. (**si puedo consultar si esta respuesta es la que quieren en el parcial**)
+- Beneficio 2: incremento en la transparencia y trazabilidad.
+	- Descripción: permitir que el 100% de los reclamos digitales tengan un número de seguimiento visible para el ciudadano en tiempo real.
+	- Evaluación: encuestas de satisfacción del cliente (ciudadano) y auditoría de logs del sistema al finalizar el primer año de operación.
+	- Resultado esperado: lograr una calificación superior a 4/5 en percepción de transparencia en las encuestas ciudadanas.
+- Beneficio 3: eficiencia en la administración interna.
+	- Descripción: eliminar la duplicación de tareas y el ingreso manual de datos en múltiples planillas de papel.
+	- Evaluación: medición de la productividad operativa del personal administrativo comparando horas hombre dedicadas a la carga de datos antes y después del sistema.
+	- Resultado esperado: eeducción del 20% en costos operativos relacionados con la gestión burocrática de reclamos.
+
+### 13. Diseñe un plan de comunicación básico para el proyecto.
+
+Un plan de comunicación es central para gestionar las expectativas de los interesados.
+
+- Objetivo: concientizar sobre los beneficios, mantener informados a los interesados y asegurar la alineación de expectativas.
+- Mensajes Clave: "La municipalidad está más cerca tuyo", "Tu reclamo tiene seguimiento real". (en la teoria decia Promover mensajes claves del programa asi que supongo que está bien esto (?)
+- Canales y Audiencia:
+	- Externo (Ciudadanos): redes sociales, gacetillas en prensa/medios locales y cartelería en oficinas públicas para un alcance amplio.
+	- Interno (Empleados): boletines internos, correos electrónicos y seminarios/workshops para contacto directo y feedback.
+- Responsables: el Líder de Proyecto y el área de Comunicación Institucional.
+- Frecuencia: reportes de avance mensuales para las autoridades; campaña intensiva de uso 15 días antes del lanzamiento; y comunicación de resultados de beneficios cada semestre.
+- Feedback: implementación de un canal de comunicación de doble vía para recibir sugerencias de los usuarios y actuar en consecuencia.
+
+## Parte V: Ejercicios
+
+### 14. Una universidad desea implementar un “Sistema Integral Académico” en 3 meses, el cual debe permitir: gestionar inscripciones a materias, administrar notas, permitir comunicación entre docentes y alumnos e integrarse con sistemas existentes. El proyecto aún no tiene un presupuesto definido, cuenta con un equipo de 5 integrantes, no hay claridad sobre los requerimientos, se aplica a distintas áreas (alumnos, docentes, administración) con expectativas diferentes y las autoridades esperan que el sistema “resuelva todos los problemas actuales”.
+
+- Detecte al menos 5 problemas concretos del proyecto.
+	- Expectativas poco realistas: la dirección espera que el sistema "resuelva todos los problemas actuales", lo cual es un objetivo vago, no medible y probablemente inalcanzable para un solo sistema de software.
+	- Ausencia de presupuesto: un proyecto se define por tener que ser completado dentro de un costo específico, no tener un presupuesto definido impide la administración de recursos y el control financiero.
+	- Plazo de entrega insuficiente (3 meses): implementar un sistema "integral" que incluye inscripciones, notas, comunicaciones e integraciones técnicas complejas en solo 3 meses representa una mala estimación de la duración.
+	- Requerimientos ambiguos: no hay claridad sobre lo que el sistema debe hacer exactamente ("no hay claridad sobre los requerimientos"), lo que impide que el producto final cumpla con las especificaciones.
+	- Conflicto de intereses entre stakeholders: existen múltiples áreas (alumnos, docentes, administración) con expectativas diferentes que no han sido alineadas, lo que genera un alto riesgo de rechazo del sistema
+	- 
+- Clasifique los problemas en categorías (planificación, alcance, recursos, …) y justifique brevemente cada clasificación.
+
+|**Categoría**|**Problemas identificados**|**Justificación**|
+|-|-|-|
+|**Alcance**|Requerimientos ambiguos y el objetivo de "resolver todo"|El alcance debe definir los límites del proyecto (qué se hace y qué no). Al ser ambiguo, el equipo no sabe cuándo ha terminado o qué debe construir exactamente|
+|**Planificación**|Plazo de 3 meses para un sistema integral complejo|La planificación requiere una estimación de tiempos realista. Un plazo arbitrario sin considerar la complejidad técnica ni las tareas de integración indica una planificación deficiente|
+|**Recursos** (presupuesto)|Presupuesto no definido|El costo es el presupuesto disponible. Sin un límite financiero, es imposible gestionar la adquisición de herramientas, infraestructura o personal adicional necesario|
+|**Gestión de interesados**|Expectativas contrapuestas de alumnos, docentes y autoridades|La falta de compromiso y participación de los interesados en una etapa temprana impide definir beneficios claros y genera metas poco realistas que llevan al fracaso del programa|
+|**Recursos** (humanos)|Equipo de 5 integrantes para múltiples áreas y funciones|Las personas son el recurso más importante. Un equipo de 5 puede ser insuficiente para cubrir simultáneamente el análisis, desarrollo, pruebas e integración de un sistema que afecta a toda la universidad|
+
+- Redefina el proyecto proponiendo un objetivo claro, un alcance acotado y restricciones realistas.
+	- Objetivo: desarrollar e implementar el núcleo funcional del sistema académico (módulos de inscripción a materias y carga de notas) en un plazo de 3 meses, asegurando la integridad de los datos de los alumnos
+	- Alcance:
+		- Incluye: registro de alumnos, inscripción a cursadas del cuatrimestre vigente, validación de correlatividades básicas y panel de carga de notas para docentes.
+		- Excluye: sistema de mensajería interna e integración automática con todos los sistemas legados (se reemplaza por una migración de datos única)
+	- Restricciones:
+		- Tiempo: 3 meses
+		- Recursos: un equipo de 5 integrantes con roles definidos (por ejemplo 1 líder, 1 analista y 3 desarrolladores)
+		- Calidad: el sistema debe cumplir la norma ISO/IEC 25010 en su característica de funcionalidad
+		- Costo: presupuesto limitado a la infraestructura de servidores y licencias necesarias para la fase inicial
+		
+- Defina entre 5 y 10 tareas principales y realice un WBS de no más de 2 niveles.
+
+Meta: Sistema Integral Académico 
+
+1.  **Analizar Requerimientos y Diseño**
+    -   1.1 Especificar requisitos detallados de inscripción y notas.
+    -   1.2 Diseñar el modelo de datos y la arquitectura del sistema.
+2.  **Desarrollar Módulos Críticos**
+    -   2.1 Implementar el módulo de gestión de inscripciones.
+    -   2.2 Implementar el módulo de administración de notas para docentes.
+    -   2.3 Implementar el panel de autogestión para el alumno.
+3.  **Integrar y Probar**
+    -   3.1 Ejecutar pruebas funcionales y de seguridad.
+    -   3.2 Realizar la migración inicial de datos existentes.
+4.  **Implementar y Desplegar**
+    -   4.1 Capacitar a los usuarios clave (docentes y administrativos).
+    -   4.2 Desplegar el sistema en el entorno de producción.
