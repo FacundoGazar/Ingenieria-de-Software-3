@@ -104,3 +104,21 @@
 	-  Depende del sistema que se está evaluando, si hablamos de una app médica me enfocaría mas en la caracteristica de capacidad para ser usado, ya que es escencial que los pacientes puedan realizar las tareas correctamente ya sea para leer una receta, pedir un turno, etc, son cosas que no se pueden dejar de lado.
 
 ## 7. Una empresa utiliza la siguiente métrica:
+
+	Coding rules conformity
+	X = A / B
+	donde:
+	• A = módulos que cumplen reglas
+	• B = módulos totales
+	El valor ideal es cercano a 1.
+
+- Explique cómo combinaría tres mediciones distintas de esta métrica (con diferentes reglas) para obtener un valor representativo de la mantenibilidad del sistema.
+	- X1​: conformidad con reglas de acoplamiento (Modularidad).
+	- X2​: conformidad con reglas de comentarios y logs (Capacidad para ser probado).
+	-  X3​: conformidad con límites de complejidad ciclomática (Capacidad para ser modificaado).  Valor total: Xtotal​=(X1​+X2​+X3​)/3. El sistema se consideraría mantenible solo si el resultado final se acerca a 1 y ninguna de las mediciones individuales cae por debajo de un umbral mínimo (ej. 0,7).
+
+- Suponga que necesita evaluar mejor la mantenibilidad. Proponga una nueva métrica concreta e indique qué mide, cómo se calcula y cómo se interpretan los resultados.
+	- Suficiencia de registros de diagnóstico. Mide el grado en que el sistema genera información suficiente para identificar la causa de un fallo. X = A/B, donde:
+		- A = cantidad de módulos críticos del sistema que generan un registro de error detallado ante una excepción.
+		- B = cantidad de módulos críticos del sistema.
+
